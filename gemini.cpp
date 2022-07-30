@@ -23,12 +23,20 @@ void talk(void) {
   return;
 }
 
-// first argument: 需要對應build之後的名稱 tick_test.cpp -o gemini <- 這邊名稱一致，之後可在python中呼叫
+
 PYBIND11_MODULE(gemini, m) {
-  m.doc() = "pybind11 example plugin";      // module doc string
-  m.def("add",                              // function name
-        &add,                               // function pointer
-        "A function which adds two numbers" //function doc string
+  /* 
+    gemini: module name for python 呼叫用
+    m: module instance name
+
+    func:
+      add(int, int) -> int
+      talk() -> None
+  */
+  m.doc() = "pybind11 example plugin";       // module doc string
+  m.def("add",                               // function name for python
+        &add,                                // function pointer for cpp
+        "A function which adds two numbers"  // function doc string
        );
   m.def("talk", &talk, "A function which talks");
 }
