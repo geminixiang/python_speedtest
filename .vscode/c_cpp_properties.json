@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/hackmini/miniforge3/envs/tor/include/python3.9",
+                "/home/hackmini/miniforge3/envs/tor/lib/python3.9/site-packages/torch/include",
+                "/home/hackmini/miniforge3/envs/tor/lib/python3.9/site-packages/torch/include/torch/csrc/api/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}
